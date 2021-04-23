@@ -28,7 +28,7 @@ func UploadPolicies(c *gin.Context) {
 		logger.Errorf("Insert policies to db failed %s", err.Error())
 	}
 	logger.Infof("Upload excel services success")
-	Response(c, nil, common.Success, nil)
+	Response(c, nil, common.Success, policies)
 	return
 }
 
@@ -51,7 +51,7 @@ func UploadServices(c *gin.Context) {
 		logger.Errorf("Insert services to db failed %s", err.Error())
 	}
 	logger.Infof("Upload excel services success")
-	Response(c, nil, common.Success, nil)
+	Response(c, nil, common.Success, services)
 	return
 }
 
@@ -131,4 +131,30 @@ func uploadService(service *db.TService) (int, error) {
 		}
 	}
 	return common.Success, nil
+}
+
+func GetPolicyByNumber(c *gin.Context) {
+	id := c.Param("id")
+	res, err := db.GetPolicyByNumber(id)
+	if err != nil {
+		logger.Errorf("Get policy %s failed %s", id, err.Error())
+		Response(c, err, common.GetDBErr, nil)
+		return
+	}
+	logger.Infof("Get policy %+v", *res)
+	Response(c, nil, common.Success, res)
+	return
+}
+
+func GetServiceById(c *gin.Context) {
+	id := c.Param("id")
+	res, err := db.GetServiceById(id)
+	if err != nil {
+		logger.Errorf("Get service %s failed %s", id, err.Error())
+		Response(c, err, common.GetDBErr, nil)
+		return
+	}
+	logger.Infof("Get service %+v", *res)
+	Response(c, nil, common.Success, res)
+	return
 }

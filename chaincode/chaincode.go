@@ -17,6 +17,7 @@ type handlerFunc func(stub shim.ChaincodeStubInterface, function string, args []
 var funcHandler = map[string]handlerFunc{
 	define.SaveService: handler.SaveService,
 	define.SavePolicy:  handler.SavePolicy,
+	define.QueryByTxID: handler.QueryByTxID,
 	//define.FUNC_VoucherAssign			: 	handler.VoucherAssign,
 	//define.FUNC_VoucherAccept			: 	handler.VoucherAccept,
 }

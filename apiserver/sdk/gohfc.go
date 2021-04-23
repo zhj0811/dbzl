@@ -57,3 +57,11 @@ func Query(in []string) ([]byte, error) {
 func GetUserId() string {
 	return viper.GetString("user.id")
 }
+
+func GetBlockHeightByTxID(txId string) (uint64, error) {
+	block, err := hfcSdk.GetBlockByTxID(txId, "")
+	if err != nil {
+		return 0, err
+	}
+	return block.BlockNum, nil
+}

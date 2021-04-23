@@ -1,6 +1,7 @@
 package router
 
 import (
+	"net/http"
 	"sync"
 
 	"github.com/gin-gonic/gin"
@@ -23,18 +24,29 @@ func GetRouter() *gin.Engine {
 func createRouter() *gin.Engine {
 	r := gin.Default()
 
+	r.POST("/login", handler.Login)       //登录
+	r.POST("/register", handler.Register) //机构注册
+	//r.Use(handler.TokenAuthMiddleware())
 	dbzl := r.Group("/v1/dbzl")
 	{
 		dbzl.POST("/excel/policy", handler.UploadPolicies)
 		dbzl.POST("/excel/service", handler.UploadServices)
 
 		dbzl.POST("/policy", handler.UploadPolicy)
+		dbzl.GET("/policy/:id", handler.GetPolicyByNumber)
+		dbzl.GET("/policy", handler.GetPolicies)
 		//dbzl.PUT("/policy", handler.ModifyPolicy)
 		dbzl.POST("/service", handler.UploadService)
+		dbzl.GET("/service/:id", handler.GetServiceById)
+		dbzl.GET("/service", handler.GetServices)
 		//dbzl.POST("/invoke/policy", handler.UploadPolicy)
 		dbzl.POST("/invoke/policy/:id", handler.InvokePolicy)
 		dbzl.POST("/invoke/service/:id", handler.InvokeService)
 		//dbzl.POST("/invoke/service", handler.UploadService)
+
+		dbzl.GET("/query/:id", handler.QueryPolicyByNumber) //查询链上信息
+		//template := dbzl.Group("/template")
+		dbzl.StaticFS("/template", http.Dir("./template"))
 	}
 	return r
 }

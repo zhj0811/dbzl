@@ -12,8 +12,18 @@ const (
 	InsertDBErr
 	UpdateDBErr
 
+	GetPolicyErr
+	GetServiceErr
+
 	MarshalJSONErr
 	InvokeErr
+	QueryErr
+
+	TokenNilErr
+	TokenInvalidErr
+
+	UserInvalidErr
+	UserNameOrPasswdErr
 )
 
 var (

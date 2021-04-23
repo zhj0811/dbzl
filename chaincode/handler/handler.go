@@ -31,6 +31,7 @@ func SavePolicy(stub shim.ChaincodeStubInterface, function string, args []string
 	if err != nil {
 		return nil, err
 	}
+	return nil, nil
 }
 
 func SaveService(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
@@ -45,12 +46,18 @@ func SaveService(stub shim.ChaincodeStubInterface, function string, args []strin
 	if err != nil {
 		return nil, err
 	}
-	//p := Policy{PId: txId}
+
 	pBytes, err := stub.GetState(req.Number)
 	if err != nil {
 		return nil, err
 	}
-	p, err := json.Marshal(&Policy{PId: txId})
+	policy := &Policy{}
+	err = json.Unmarshal(pBytes, policy)
+	if err != nil {
+		return nil, err
+	}
+	policy.SIds = append(policy.SIds, txId)
+	p, err := json.Marshal(policy)
 	if err != nil {
 		return nil, err
 	}
@@ -58,4 +65,10 @@ func SaveService(stub shim.ChaincodeStubInterface, function string, args []strin
 	if err != nil {
 		return nil, err
 	}
+	return nil, nil
+}
+
+func QueryByTxID(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
+	logger.Infof("Get value by key of tx id %s", args[0])
+	return stub.GetState(args[0])
 }
