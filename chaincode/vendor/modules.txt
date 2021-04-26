@@ -26,7 +26,7 @@ github.com/pkg/errors
 # github.com/sykesm/zap-logfmt v0.0.4
 ## explicit
 github.com/sykesm/zap-logfmt
-# github.com/zhj0811/dbzl v0.0.0-20210421090429-2c0c1f4d6810
+# github.com/zhj0811/dbzl v0.0.0-20210423072507-4d74ac9142fc
 ## explicit
 github.com/zhj0811/dbzl/common/define
 # go.uber.org/atomic v1.6.0

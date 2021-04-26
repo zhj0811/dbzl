@@ -342,6 +342,8 @@ github.com/yuin/goldmark v1.1.27/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9de
 github.com/yuin/goldmark v1.2.1/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
 github.com/zhj0811/dbzl v0.0.0-20210421090429-2c0c1f4d6810 h1:UeGJi1aKuELmLQSVEUzKRUmJvCOtXLvhRUl2LuWGM44=
 github.com/zhj0811/dbzl v0.0.0-20210421090429-2c0c1f4d6810/go.mod h1:q2Lp33ZmE/HSB4cGcbSF9RYRVlvXlvDxBFFhh/PgLoc=
+github.com/zhj0811/dbzl v0.0.0-20210423072507-4d74ac9142fc h1:QHQfOV2Wm5fekKAOZ4RPrcLQUvukuf3dW6kMMeW16uw=
+github.com/zhj0811/dbzl v0.0.0-20210423072507-4d74ac9142fc/go.mod h1:U98TQI2W5UtiMyAFI0X42w9E50vfbiWE51U7di2btTE=
 github.com/zhj0811/fabric v0.0.0-20200429064247-2d926cae77ef h1:ntKzQMrRHJ3lXwKP8d9ssNSZKQP954xR1Vu6p3n4zz4=
 github.com/zhj0811/fabric/chaincode v0.0.0-20200429064247-2d926cae77ef h1:4iTepD6A77FYi/hvzhH7T1AnNHMWi7Ppyh7C1g1VG8U=
 go.etcd.io/bbolt v1.3.1-etcd.7/go.mod h1:IbVyRI1SCnLcuJnV2u8VeU0CEYM7e686BmAb1XKL+uU=
