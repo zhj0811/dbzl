@@ -17,10 +17,9 @@ type handlerFunc func(stub shim.ChaincodeStubInterface, function string, args []
 var funcHandler = map[string]handlerFunc{
 	define.SaveService: handler.SaveService,
 	define.SavePolicy:  handler.SavePolicy,
+	define.SaveCompany: handler.SaveCompany,
 	define.QueryByTxID: handler.QueryByTxID,
 	define.QueryByKey:  handler.QueryByKey,
-	//define.FUNC_VoucherAssign			: 	handler.VoucherAssign,
-	//define.FUNC_VoucherAccept			: 	handler.VoucherAccept,
 }
 
 //Chaincode cc对象用于调研各类fabric接口函数

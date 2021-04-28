@@ -1,7 +1,7 @@
 package define
 
 type Company struct {
-	ID           string `json:"id"`               //全局唯一标识
+	ID           string `json:"id"`               //唯一标识
 	Name         string `json:"name"`             //公司名称
 	PreviousName string `json:"previous_name"`    //曾用名
 	USCC         string `json:"uscc" gorm:"uscc"` //统一社会信用代码

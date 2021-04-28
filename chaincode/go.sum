@@ -21,7 +21,7 @@ github.com/Knetic/govaluate v3.0.0+incompatible/go.mod h1:r7JcOSlj0wfOMncg0iLm8L
 github.com/Microsoft/go-winio v0.4.12/go.mod h1:VhR8bwka0BXejwEJY73c50VrPtXAaKcyvVC4A4RozmA=
 github.com/Microsoft/hcsshim v0.8.6/go.mod h1:Op3hHsoHPAvb6lceZHDtd9OkTew38wNoXnJs8iY7rUg=
 github.com/OneOfOne/xxhash v1.2.2/go.mod h1:HSdplMjZKSmBqAxg5vPj2TmRDmfkzw+cTzAElWljhcU=
-github.com/zhj0811/gohfc v0.0.0-20210128032332-ccc86464889a/go.mod h1:lTMWWDpHwjp8EBRr2NcTkoG6vH+eNggfCogTJ9p56tA=
+github.com/PeerFintech/gohfc v0.0.0-20210128032332-ccc86464889a/go.mod h1:lTMWWDpHwjp8EBRr2NcTkoG6vH+eNggfCogTJ9p56tA=
 github.com/Shopify/sarama v1.20.1/go.mod h1:FVkBWblsNy7DGZRfXLU0O9RCGt5g3g3yEuWXgklEdEo=
 github.com/Shopify/sarama v1.26.1/go.mod h1:NbSGBSSndYaIhRcBtY9V0U7AyH+x71bG668AuWys/yU=
 github.com/Shopify/toxiproxy v2.1.4+incompatible/go.mod h1:OXgGpZ6Cli1/URJOF1DMxUHB2q5Ap20/P/eIdh4G0pI=
@@ -172,10 +172,12 @@ github.com/hyperledger/fabric v2.1.1+incompatible h1:cYYRv3vVg4kA6DmrixLxwn1nwBE
 github.com/hyperledger/fabric v2.1.1+incompatible/go.mod h1:tGFAOCT696D3rG0Vofd2dyWYLySHlh0aQjf7Q1HAju0=
 github.com/hyperledger/fabric-amcl v0.0.0-20200128223036-d1aa2665426a/go.mod h1:X+DIyUsaTmalOpmpQfIvFZjKHQedrURQ5t4YqquX7lE=
 github.com/hyperledger/fabric-amcl v0.0.0-20200424173818-327c9e2cf77a/go.mod h1:X+DIyUsaTmalOpmpQfIvFZjKHQedrURQ5t4YqquX7lE=
+github.com/hyperledger/fabric-amcl v0.0.0-20210319225857-000ace5745f9/go.mod h1:X+DIyUsaTmalOpmpQfIvFZjKHQedrURQ5t4YqquX7lE=
 github.com/hyperledger/fabric-chaincode-go v0.0.0-20200128192331-2d899240a7ed/go.mod h1:N7H3sA7Tx4k/YzFq7U0EPdqJtqvM4Kild0JoCc7C0Dc=
 github.com/hyperledger/fabric-chaincode-go v0.0.0-20210319203922-6b661064d4d9 h1:sFlbPSZBsp8wm2erYSk62FeeH6V0dmxJRl9yi7glsuE=
 github.com/hyperledger/fabric-chaincode-go v0.0.0-20210319203922-6b661064d4d9/go.mod h1:N7H3sA7Tx4k/YzFq7U0EPdqJtqvM4Kild0JoCc7C0Dc=
 github.com/hyperledger/fabric-config v0.0.5/go.mod h1:YpITBI/+ZayA3XWY5lF302K7PAsFYjEEPM/zr3hegA8=
+github.com/hyperledger/fabric-config v0.1.0/go.mod h1:aeDZ0moG/qKvwLjddcqYr8+58/oNaJy3HE0tI01546c=
 github.com/hyperledger/fabric-lib-go v1.0.0/go.mod h1:H362nMlunurmHwkYqR5uHL2UDWbQdbfz74n8kbCFsqc=
 github.com/hyperledger/fabric-protos-go v0.0.0-20190919234611-2a87503ac7c9/go.mod h1:xVYTjK4DtZRBxZ2D9aE4y6AbLaPwue2o/criQyQbVD0=
 github.com/hyperledger/fabric-protos-go v0.0.0-20200424173316-dd554ba3746e/go.mod h1:xVYTjK4DtZRBxZ2D9aE4y6AbLaPwue2o/criQyQbVD0=
@@ -183,6 +185,8 @@ github.com/hyperledger/fabric-protos-go v0.0.0-20200506201313-25f6564b9ac4/go.mo
 github.com/hyperledger/fabric-protos-go v0.0.0-20200707132912-fee30f3ccd23/go.mod h1:xVYTjK4DtZRBxZ2D9aE4y6AbLaPwue2o/criQyQbVD0=
 github.com/hyperledger/fabric-protos-go v0.0.0-20210318103044-13fdee960194 h1:orJqC5I8O/pUGWBwlyxEFfJh7WdbvqNd4mLdLWyghIo=
 github.com/hyperledger/fabric-protos-go v0.0.0-20210318103044-13fdee960194/go.mod h1:xVYTjK4DtZRBxZ2D9aE4y6AbLaPwue2o/criQyQbVD0=
+github.com/hyperledger/fabric-protos-go v0.0.0-20210422135545-37e930696e2a h1:sJwXhCxTQ7euBj+4w7pomn0CzOgdHkLlUOqtDgsI8IA=
+github.com/hyperledger/fabric-protos-go v0.0.0-20210422135545-37e930696e2a/go.mod h1:xVYTjK4DtZRBxZ2D9aE4y6AbLaPwue2o/criQyQbVD0=
 github.com/ijc/Gotty v0.0.0-20170406111628-a8b993ba6abd/go.mod h1:3LVOLeyx9XVvwPgrt2be44XgSqndprz1G18rSk8KD84=
 github.com/inconshreveable/mousetrap v1.0.0/go.mod h1:PxqpIevigyE2G7u3NXJIT2ANytuPF1OarO4DADm73n8=
 github.com/jcmturner/gofork v1.0.0/go.mod h1:MK8+TM0La+2rjBD4jE12Kj1pCCxK7d2LK/UM3ncEo0o=
@@ -312,6 +316,7 @@ github.com/spf13/pflag v1.0.5/go.mod h1:McXfInJRrz4CZXVZOBLb0bTZqETkiAhM9Iw0y3An
 github.com/spf13/viper v0.0.0-20150908122457-1967d93db724/go.mod h1:A8kyI5cUJhb8N+3pkfONlcEcZbueH6nhAm0Fq7SrnBM=
 github.com/spf13/viper v1.6.3/go.mod h1:jUMtyi0/lB5yZH/FjyGAoH7IMNrIhlBf6pXZmbMDvzw=
 github.com/spf13/viper v1.7.0/go.mod h1:8WkrPz2fc9jxqZNCJI/76HCieCp4Q8HaLFoCha5qpdg=
+github.com/spf13/viper v1.7.1/go.mod h1:8WkrPz2fc9jxqZNCJI/76HCieCp4Q8HaLFoCha5qpdg=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/objx v0.1.1/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.2.2/go.mod h1:a8OnRcib4nhh0OaRAV+Yts87kKdq0PP7pXfy6kDkUVs=
@@ -344,8 +349,14 @@ github.com/zhj0811/dbzl v0.0.0-20210421090429-2c0c1f4d6810 h1:UeGJi1aKuELmLQSVEU
 github.com/zhj0811/dbzl v0.0.0-20210421090429-2c0c1f4d6810/go.mod h1:q2Lp33ZmE/HSB4cGcbSF9RYRVlvXlvDxBFFhh/PgLoc=
 github.com/zhj0811/dbzl v0.0.0-20210423072507-4d74ac9142fc h1:QHQfOV2Wm5fekKAOZ4RPrcLQUvukuf3dW6kMMeW16uw=
 github.com/zhj0811/dbzl v0.0.0-20210423072507-4d74ac9142fc/go.mod h1:U98TQI2W5UtiMyAFI0X42w9E50vfbiWE51U7di2btTE=
+github.com/zhj0811/dbzl v0.0.0-20210426032459-f83e6e70c508 h1:uftX78AfbGtZ75omxFMOoOwJndLdsNl3AEEm2It3/CU=
+github.com/zhj0811/dbzl v0.0.0-20210426032459-f83e6e70c508/go.mod h1:U98TQI2W5UtiMyAFI0X42w9E50vfbiWE51U7di2btTE=
+github.com/zhj0811/dbzl v0.0.0-20210428085739-6dcf80722985 h1:1GCRQC8OP2cVYBHby/OFtzL+ktll0yJJuCe8zLFZmbU=
+github.com/zhj0811/dbzl v0.0.0-20210428085739-6dcf80722985/go.mod h1:wJDmHp7Huv/P+19ws3/LeNCi9XF9E3eQFXfqZdQJCYE=
 github.com/zhj0811/fabric v0.0.0-20200429064247-2d926cae77ef h1:ntKzQMrRHJ3lXwKP8d9ssNSZKQP954xR1Vu6p3n4zz4=
 github.com/zhj0811/fabric/chaincode v0.0.0-20200429064247-2d926cae77ef h1:4iTepD6A77FYi/hvzhH7T1AnNHMWi7Ppyh7C1g1VG8U=
+github.com/zhj0811/gohfc v0.0.0-20210128032332-ccc86464889a/go.mod h1:lTMWWDpHwjp8EBRr2NcTkoG6vH+eNggfCogTJ9p56tA=
+github.com/zhj0811/gohfc v0.0.0-20210428080623-fe00cc193e75/go.mod h1:oluFKqIaWmdLRW5TaZT42C7zQ2yhxGZJGErT47iePxg=
 go.etcd.io/bbolt v1.3.1-etcd.7/go.mod h1:IbVyRI1SCnLcuJnV2u8VeU0CEYM7e686BmAb1XKL+uU=
 go.etcd.io/bbolt v1.3.2/go.mod h1:IbVyRI1SCnLcuJnV2u8VeU0CEYM7e686BmAb1XKL+uU=
 go.etcd.io/etcd v0.5.0-alpha.5.0.20181228115726-23731bf9ba55/go.mod h1:weASp41xM3dk0YHg1s/W8ecdGP5G4teSTMBPpYAaUgA=

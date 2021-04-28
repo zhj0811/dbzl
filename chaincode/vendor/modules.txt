@@ -1,3 +1,5 @@
+# github.com/PeerFintech/gohfc v0.0.0-20210128032332-ccc86464889a
+## explicit
 # github.com/golang/protobuf v1.4.2
 github.com/golang/protobuf/proto
 github.com/golang/protobuf/ptypes
@@ -13,7 +15,7 @@ github.com/hyperledger/fabric/common/flogging/fabenc
 ## explicit
 github.com/hyperledger/fabric-chaincode-go/shim
 github.com/hyperledger/fabric-chaincode-go/shim/internal
-# github.com/hyperledger/fabric-protos-go v0.0.0-20210318103044-13fdee960194
+# github.com/hyperledger/fabric-protos-go v0.0.0-20210422135545-37e930696e2a
 ## explicit
 github.com/hyperledger/fabric-protos-go/common
 github.com/hyperledger/fabric-protos-go/ledger/queryresult
@@ -23,10 +25,12 @@ github.com/hyperledger/fabric-protos-go/peer
 # github.com/pkg/errors v0.9.1
 ## explicit
 github.com/pkg/errors
+# github.com/spf13/cobra v1.1.3
+## explicit
 # github.com/sykesm/zap-logfmt v0.0.4
 ## explicit
 github.com/sykesm/zap-logfmt
-# github.com/zhj0811/dbzl v0.0.0-20210423072507-4d74ac9142fc
+# github.com/zhj0811/dbzl v0.0.0-20210428085739-6dcf80722985
 ## explicit
 github.com/zhj0811/dbzl/common/define
 # go.uber.org/atomic v1.6.0
