@@ -126,3 +126,40 @@ func queryPolicyByNumber(number string) (*PolicyFullInfo, int, error) {
 	}
 	return res, common.Success, nil
 }
+
+func QueryPolicy(c *gin.Context) {
+	id := c.Param("id")
+	res, errCode, err := queryPolicy(id)
+	if err != nil {
+		logger.Errorf("Fabric query policy %s failed %s", id, err.Error())
+		Response(c, err, errCode, nil)
+		return
+	}
+	logger.Infof("Fabric query policy success %+v", res)
+	Response(c, nil, common.Success, res)
+	return
+}
+
+func queryPolicy(id string) (*define.PolicyInfo, int, error) {
+	bytes, err := queryByKey(id)
+	if err != nil {
+		return nil, common.QueryErr, err
+	}
+	res := &define.PolicyInfo{}
+	err = json.Unmarshal(bytes, res)
+	if err != nil {
+		return nil, common.UnmarshalJSONErr, err
+	}
+	filterTx, err := sdk.GetFilterTxByTxID(res.TxID)
+	if err != nil {
+		return nil, common.QueryErr, err
+	}
+	res.BlockHeight = filterTx.BlockNum
+	res.Timestamp = filterTx.Timestamp
+	return res, common.Success, nil
+}
+
+func queryByKey(key string) ([]byte, error) {
+	args := []string{define.QueryByKey, key}
+	return sdk.Query(args)
+}

@@ -1,9 +1,13 @@
 package handler
 
 import (
+	"encoding/json"
+
 	"github.com/gin-gonic/gin"
 	"github.com/zhj0811/dbzl/apiserver/common"
 	"github.com/zhj0811/dbzl/apiserver/db"
+	"github.com/zhj0811/dbzl/apiserver/sdk"
+	"github.com/zhj0811/dbzl/common/define"
 )
 
 func GetServices(c *gin.Context) {
@@ -21,4 +25,70 @@ func GetServices(c *gin.Context) {
 	res := ListInfo{Total: totalCount, List: list}
 	Response(c, nil, common.Success, res)
 	return
+}
+
+func UploadInvokeService(c *gin.Context) {
+	service := &define.Service{}
+	err := c.ShouldBindJSON(service)
+	if err != nil {
+		logger.Errorf("Read service policy failed %s", err.Error())
+		Response(c, err, common.RequestFormatErr, nil)
+		return
+	}
+	txId, errCode, err := invokeService(service)
+	if err != nil {
+		logger.Errorf("Invoke service failed %s", err.Error())
+		Response(c, err, errCode, nil)
+		return
+	}
+	logger.Infof("Invoke policy %s success, tx id: %s", service.ID, txId)
+	Response(c, nil, common.Success, txId)
+	return
+}
+
+func invokeService(service *define.Service) (string, int, error) {
+	args, err := json.Marshal(service)
+	if err != nil {
+		//logger.Errorf("Marshal policy failed %s", err.Error())
+		//Response(c, err, common.RequestFormatErr, nil)
+		return "", common.RequestFormatErr, err
+	}
+	req := []string{define.SaveService, string(args)}
+	res, err := sdk.Invoke(req)
+	if err != nil {
+		return "", common.InvokeErr, err
+	}
+	return res.TxID, common.Success, nil
+}
+
+func QueryService(c *gin.Context) {
+	id := c.Param("id")
+	res, errCode, err := queryService(id)
+	if err != nil {
+		logger.Errorf("Fabric query service %s failed %s", id, err.Error())
+		Response(c, err, errCode, nil)
+		return
+	}
+	logger.Infof("Fabric query service success %+v", res)
+	Response(c, nil, common.Success, res)
+	return
+}
+
+func queryService(id string) (*define.ServiceInfo, int, error) {
+	bytes, err := queryByKey(id)
+	if err != nil {
+		return nil, common.QueryErr, err
+	}
+	res := &define.ServiceInfo{}
+	err = json.Unmarshal(bytes, res)
+	if err != nil {
+		return nil, common.UnmarshalJSONErr, err
+	}
+	filterTx, err := sdk.GetFilterTxByTxID(res.TxID)
+	if err != nil {
+		return nil, common.QueryErr, err
+	}
+	res.BlockHeight = filterTx.BlockNum
+	res.Timestamp = filterTx.Timestamp
+	return res, common.Success, nil
 }

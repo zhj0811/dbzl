@@ -12,7 +12,7 @@ PREV_APISERVER_VERSION = 1.0.0
 
 
 PROJECT_NAME = zhj0811/dbzl
-DOCKERIMAGE = zhj0811/dbzl
+DOCKERIMAGE = zhj0811/fabric-dbzl
 
 export DOCKERIMAGE
 EXTRA_VERSION ?= $(shell git rev-parse --short HEAD)
@@ -40,7 +40,7 @@ apiserver:
 .PHONY: apiserver-docker
 apiserver-docker: apiserver
 	@echo "Building apiserver docker image...."
-	@./scripts/buildImages.sh
+	@./buildImages.sh
 
 .PHONY: unit-test
 unit-test:

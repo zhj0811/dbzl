@@ -14,7 +14,6 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/hyperledger/fabric/common/flogging"
 	"github.com/spf13/viper"
-	"github.com/zhj0811/dbzl/apiserver/db"
 	"github.com/zhj0811/dbzl/apiserver/router"
 	"github.com/zhj0811/dbzl/apiserver/sdk"
 )
@@ -34,12 +33,12 @@ func main() {
 		panic(err)
 	}
 	logger.Info("Init sdk success.")
-	err = db.InitDb()
-	if err != nil {
-		logger.Errorf("Init db failed %s", err.Error())
-		panic(err)
-	}
-	logger.Info("Init db success")
+	//err = db.InitDb()
+	//if err != nil {
+	//	logger.Errorf("Init db failed %s", err.Error())
+	//	panic(err)
+	//}
+	//logger.Info("Init db success")
 	// init gin http server
 	gin.SetMode(gin.ReleaseMode)
 	r := router.GetRouter()

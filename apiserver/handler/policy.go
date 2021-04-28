@@ -1,9 +1,13 @@
 package handler
 
 import (
+	"encoding/json"
+
 	"github.com/gin-gonic/gin"
 	"github.com/zhj0811/dbzl/apiserver/common"
 	"github.com/zhj0811/dbzl/apiserver/db"
+	"github.com/zhj0811/dbzl/apiserver/sdk"
+	"github.com/zhj0811/dbzl/common/define"
 )
 
 func GetPolicies(c *gin.Context) {
@@ -20,4 +24,38 @@ func GetPolicies(c *gin.Context) {
 	res := ListInfo{Total: totalCount, List: list}
 	Response(c, nil, common.Success, res)
 	return
+}
+
+func UploadInvokePolicy(c *gin.Context) {
+	policy := &define.Policy{}
+	err := c.ShouldBindJSON(policy)
+	if err != nil {
+		logger.Errorf("Read request policy failed %s", err.Error())
+		Response(c, err, common.RequestFormatErr, nil)
+		return
+	}
+	txId, errCode, err := invokePolicy(policy)
+	if err != nil {
+		logger.Errorf("Invoke policy failed %s", err.Error())
+		Response(c, err, errCode, nil)
+		return
+	}
+	logger.Infof("Invoke policy %s success, tx id: %s", policy.ID, txId)
+	Response(c, nil, common.Success, txId)
+	return
+}
+
+func invokePolicy(policy *define.Policy) (string, int, error) {
+	args, err := json.Marshal(policy)
+	if err != nil {
+		//logger.Errorf("Marshal policy failed %s", err.Error())
+		//Response(c, err, common.RequestFormatErr, nil)
+		return "", common.RequestFormatErr, err
+	}
+	req := []string{define.SavePolicy, string(args)}
+	res, err := sdk.Invoke(req)
+	if err != nil {
+		return "", common.InvokeErr, err
+	}
+	return res.TxID, common.Success, nil
 }

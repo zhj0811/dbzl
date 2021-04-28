@@ -16,6 +16,7 @@ const (
 	GetServiceErr
 
 	MarshalJSONErr
+	UnmarshalJSONErr
 	InvokeErr
 	QueryErr
 

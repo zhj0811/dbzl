@@ -10,7 +10,8 @@ var DB *gorm.DB
 
 func InitDb() error {
 	config := &gorm.Config{NamingStrategy: &schema.NamingStrategy{SingularTable: true}}
-	DB, err := gorm.Open(sqlite.Open("db/dbzl.db"), config)
+	var err error
+	DB, err = gorm.Open(sqlite.Open("db/dbzl.db"), config)
 	if err != nil {
 		return err
 	}

@@ -3,10 +3,6 @@
 github.com/DeanThompson/ginpprof
 # github.com/Knetic/govaluate v3.0.0+incompatible
 github.com/Knetic/govaluate
-# github.com/PeerFintech/gohfc v0.0.0-20210128032332-ccc86464889a
-## explicit
-github.com/PeerFintech/gohfc/pkg
-github.com/PeerFintech/gohfc/pkg/parseBlock
 # github.com/alecthomas/template v0.0.0-20160405071501-a0175ee3bccc
 github.com/alecthomas/template
 github.com/alecthomas/template/parse
@@ -44,7 +40,7 @@ github.com/golang/protobuf/ptypes/any
 github.com/golang/protobuf/ptypes/duration
 github.com/golang/protobuf/ptypes/empty
 github.com/golang/protobuf/ptypes/timestamp
-# github.com/grpc-ecosystem/go-grpc-middleware v1.1.0
+# github.com/grpc-ecosystem/go-grpc-middleware v1.0.0
 github.com/grpc-ecosystem/go-grpc-middleware
 # github.com/hashicorp/hcl v1.0.0
 github.com/hashicorp/hcl
@@ -96,10 +92,10 @@ github.com/hyperledger/fabric/msp
 github.com/hyperledger/fabric/msp/cache
 github.com/hyperledger/fabric/msp/mgmt
 github.com/hyperledger/fabric/protoutil
-# github.com/hyperledger/fabric-amcl v0.0.0-20200424173818-327c9e2cf77a
+# github.com/hyperledger/fabric-amcl v0.0.0-20210319225857-000ace5745f9
 github.com/hyperledger/fabric-amcl/amcl
 github.com/hyperledger/fabric-amcl/amcl/FP256BN
-# github.com/hyperledger/fabric-config v0.0.5
+# github.com/hyperledger/fabric-config v0.1.0
 github.com/hyperledger/fabric-config/protolator
 github.com/hyperledger/fabric-config/protolator/protoext
 github.com/hyperledger/fabric-config/protolator/protoext/commonext
@@ -109,7 +105,7 @@ github.com/hyperledger/fabric-config/protolator/protoext/ordererext
 github.com/hyperledger/fabric-config/protolator/protoext/peerext
 # github.com/hyperledger/fabric-lib-go v1.0.0
 github.com/hyperledger/fabric-lib-go/healthz
-# github.com/hyperledger/fabric-protos-go v0.0.0-20200707132912-fee30f3ccd23
+# github.com/hyperledger/fabric-protos-go v0.0.0-20210422135545-37e930696e2a
 github.com/hyperledger/fabric-protos-go/common
 github.com/hyperledger/fabric-protos-go/gossip
 github.com/hyperledger/fabric-protos-go/ledger/rwset
@@ -135,7 +131,7 @@ github.com/mattn/go-isatty
 github.com/mattn/go-sqlite3
 # github.com/miekg/pkcs11 v1.0.3
 github.com/miekg/pkcs11
-# github.com/mitchellh/mapstructure v1.2.2
+# github.com/mitchellh/mapstructure v1.1.2
 github.com/mitchellh/mapstructure
 # github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
 github.com/modern-go/concurrent
@@ -149,31 +145,33 @@ github.com/modern-go/reflect2
 github.com/op/go-logging
 # github.com/pelletier/go-toml v1.2.0
 github.com/pelletier/go-toml
-# github.com/pkg/errors v0.9.1
+# github.com/pkg/errors v0.8.1
 github.com/pkg/errors
 # github.com/spf13/afero v1.1.2
 github.com/spf13/afero
 github.com/spf13/afero/mem
-# github.com/spf13/cast v1.3.1
+# github.com/spf13/cast v1.3.0
 github.com/spf13/cast
-# github.com/spf13/cobra v1.1.3
-## explicit
-# github.com/spf13/jwalterweatherman v1.1.0
+# github.com/spf13/jwalterweatherman v1.0.0
 github.com/spf13/jwalterweatherman
-# github.com/spf13/pflag v1.0.5
+# github.com/spf13/pflag v1.0.3
 github.com/spf13/pflag
-# github.com/spf13/viper v1.7.0
+# github.com/spf13/viper v1.7.1
 ## explicit
 github.com/spf13/viper
 # github.com/subosito/gotenv v1.2.0
 github.com/subosito/gotenv
-# github.com/sykesm/zap-logfmt v0.0.3
+# github.com/sykesm/zap-logfmt v0.0.4
 github.com/sykesm/zap-logfmt
 # github.com/tealeg/xlsx v1.0.5
 ## explicit
 github.com/tealeg/xlsx
 # github.com/ugorji/go/codec v1.1.7
 github.com/ugorji/go/codec
+# github.com/zhj0811/gohfc v0.0.0-20210428080623-fe00cc193e75
+## explicit
+github.com/zhj0811/gohfc/pkg
+github.com/zhj0811/gohfc/pkg/parseBlock
 # go.uber.org/atomic v1.6.0
 go.uber.org/atomic
 # go.uber.org/multierr v1.5.0
@@ -191,19 +189,12 @@ go.uber.org/zap/zapgrpc
 golang.org/x/crypto/sha3
 # golang.org/x/net v0.0.0-20201006153459-a7d1128ccaa0
 golang.org/x/net/context
-golang.org/x/net/context/ctxhttp
 golang.org/x/net/http/httpguts
 golang.org/x/net/http2
 golang.org/x/net/http2/hpack
 golang.org/x/net/idna
 golang.org/x/net/internal/timeseries
 golang.org/x/net/trace
-# golang.org/x/oauth2 v0.0.0-20190604053449-0f29369cfe45
-## explicit
-golang.org/x/oauth2
-golang.org/x/oauth2/internal
-golang.org/x/oauth2/jws
-golang.org/x/oauth2/jwt
 # golang.org/x/sys v0.0.0-20200930185726-fdedc70b468f
 golang.org/x/sys/cpu
 golang.org/x/sys/internal/unsafeheader
@@ -215,20 +206,10 @@ golang.org/x/text/unicode/bidi
 golang.org/x/text/unicode/norm
 # golang.org/x/tools v0.0.0-20201019175715-b894a3290fff
 ## explicit
-# google.golang.org/appengine v1.6.1
-google.golang.org/appengine/internal
-google.golang.org/appengine/internal/base
-google.golang.org/appengine/internal/datastore
-google.golang.org/appengine/internal/log
-google.golang.org/appengine/internal/remote_api
-google.golang.org/appengine/internal/urlfetch
-google.golang.org/appengine/urlfetch
 # google.golang.org/genproto v0.0.0-20191108220845-16a3f7862a1a
 google.golang.org/genproto/googleapis/rpc/status
-# google.golang.org/grpc v1.29.1
+# google.golang.org/grpc v1.23.0
 google.golang.org/grpc
-google.golang.org/grpc/attributes
-google.golang.org/grpc/backoff
 google.golang.org/grpc/balancer
 google.golang.org/grpc/balancer/base
 google.golang.org/grpc/balancer/roundrobin
@@ -246,16 +227,10 @@ google.golang.org/grpc/internal
 google.golang.org/grpc/internal/backoff
 google.golang.org/grpc/internal/balancerload
 google.golang.org/grpc/internal/binarylog
-google.golang.org/grpc/internal/buffer
 google.golang.org/grpc/internal/channelz
 google.golang.org/grpc/internal/envconfig
-google.golang.org/grpc/internal/grpclog
 google.golang.org/grpc/internal/grpcrand
 google.golang.org/grpc/internal/grpcsync
-google.golang.org/grpc/internal/grpcutil
-google.golang.org/grpc/internal/resolver/dns
-google.golang.org/grpc/internal/resolver/passthrough
-google.golang.org/grpc/internal/status
 google.golang.org/grpc/internal/syscall
 google.golang.org/grpc/internal/transport
 google.golang.org/grpc/keepalive
@@ -263,6 +238,8 @@ google.golang.org/grpc/metadata
 google.golang.org/grpc/naming
 google.golang.org/grpc/peer
 google.golang.org/grpc/resolver
+google.golang.org/grpc/resolver/dns
+google.golang.org/grpc/resolver/passthrough
 google.golang.org/grpc/serviceconfig
 google.golang.org/grpc/stats
 google.golang.org/grpc/status
@@ -307,6 +284,7 @@ gopkg.in/alecthomas/kingpin.v2
 # gopkg.in/ini.v1 v1.51.0
 gopkg.in/ini.v1
 # gopkg.in/yaml.v2 v2.4.0
+## explicit
 gopkg.in/yaml.v2
 # gorm.io/driver/sqlite v1.1.4
 ## explicit

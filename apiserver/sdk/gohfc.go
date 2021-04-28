@@ -4,8 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	gohfc "github.com/PeerFintech/gohfc/pkg"
 	"github.com/spf13/viper"
+	gohfc "github.com/zhj0811/gohfc/pkg"
+	"github.com/zhj0811/gohfc/pkg/parseBlock"
 )
 
 var (
@@ -64,4 +65,12 @@ func GetBlockHeightByTxID(txId string) (uint64, error) {
 		return 0, err
 	}
 	return block.BlockNum, nil
+}
+
+func GetFilterTxByTxID(txId string) (*parseBlock.FilterTx, error) {
+	tx, err := hfcSdk.GetFilterTxByTxID(txId, "")
+	if err != nil {
+		return nil, err
+	}
+	return tx, nil
 }

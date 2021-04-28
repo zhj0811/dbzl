@@ -18,6 +18,7 @@ var funcHandler = map[string]handlerFunc{
 	define.SaveService: handler.SaveService,
 	define.SavePolicy:  handler.SavePolicy,
 	define.QueryByTxID: handler.QueryByTxID,
+	define.QueryByKey:  handler.QueryByKey,
 	//define.FUNC_VoucherAssign			: 	handler.VoucherAssign,
 	//define.FUNC_VoucherAccept			: 	handler.VoucherAccept,
 }
