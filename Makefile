@@ -40,7 +40,7 @@ apiserver:
 .PHONY: apiserver-docker
 apiserver-docker: apiserver
 	@echo "Building apiserver docker image...."
-	@./buildImages.sh
+	@./buildImage.sh
 
 .PHONY: unit-test
 unit-test:

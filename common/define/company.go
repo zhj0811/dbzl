@@ -8,7 +8,7 @@ type Company struct {
 	Province     string `json:"province"`         //省
 	City         string `json:"city"`             //市
 	County       string `json:"county"`           //县区
-	Address      string `json:"address"`          //县区
+	Address      string `json:"address"`          //详细地址
 	Longitude    string `json:"longitude"`        //经度
 	Latitude     string `json:"latitude"`         //纬度
 	Type         string `json:"type"`             //行业类别

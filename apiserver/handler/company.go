@@ -19,11 +19,11 @@ func UploadCompany(c *gin.Context) {
 	}
 	txId, errCode, err := invokeCompany(req)
 	if err != nil {
-		logger.Errorf("Invoke policy failed %s", err.Error())
+		logger.Errorf("Invoke company failed %s", err.Error())
 		Response(c, err, errCode, nil)
 		return
 	}
-	logger.Infof("Invoke policy %s success, tx id: %s", req.ID, txId)
+	logger.Infof("Invoke company %s success, tx id: %s", req.ID, txId)
 	Response(c, nil, common.Success, txId)
 	return
 }
