@@ -145,6 +145,9 @@ func queryPolicy(id string) (*define.PolicyInfo, int, error) {
 	if err != nil {
 		return nil, common.QueryErr, err
 	}
+	if bytes == nil {
+		return nil, common.Success, nil
+	}
 	res := &define.PolicyInfo{}
 	err = json.Unmarshal(bytes, res)
 	if err != nil {

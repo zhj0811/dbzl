@@ -61,6 +61,9 @@ func queryCompany(id string) (*define.CompanyInfo, int, error) {
 	if err != nil {
 		return nil, common.QueryErr, err
 	}
+	if bytes == nil {
+		return nil, common.Success, nil
+	}
 	res := &define.CompanyInfo{}
 	err = json.Unmarshal(bytes, res)
 	if err != nil {
