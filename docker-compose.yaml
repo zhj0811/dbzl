@@ -4,6 +4,7 @@ services:
   apiserver:
     container_name: apiserver
     image: zhj0811/fabric-dbzl
+    restart: always
     volumes:
       - ./client_sdk.yaml:/opt/bin/client_sdk.yaml
       - ./crypto-config:/opt/crypto-config
